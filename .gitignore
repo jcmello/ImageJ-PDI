@@ -24,6 +24,7 @@ hs_err_pid*
 /bin/
 /lib/
 /imagenes/
+/resultados/
 /.settings/
 .project
 .classpath
