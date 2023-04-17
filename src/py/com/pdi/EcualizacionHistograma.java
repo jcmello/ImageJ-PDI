@@ -4,6 +4,20 @@ import ij.ImagePlus;
 import ij.plugin.filter.PlugInFilter;
 import ij.process.ImageProcessor;
 
+/*
+ * @article{Ibrahim_2009,
+	doi = {10.1109/tce.2009.5174471},
+	year = 2009,
+	month = {may},
+	publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+	volume = {55},
+	number = {2},
+	pages = {891--895},
+	author = {Haidi Ibrahim and Nicholas Pik Kong},
+	title = {Image sharpening using sub-regions histogram equalization},
+	journal = {{IEEE} Transactions on Consumer Electronics}
+}
+ */
 public class EcualizacionHistograma implements PlugInFilter {
 
 	@Override
