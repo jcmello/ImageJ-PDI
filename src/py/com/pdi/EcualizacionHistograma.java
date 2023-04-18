@@ -103,7 +103,7 @@ public class EcualizacionHistograma implements PlugInFilter {
 			// Double valorRedondeado = Math.rint(0.0 + ((255.0 - 0.0) *
 			// (histogramaAcumulado[i] - (0.5 * funcionProbabilidad[i]))));
 			// Se almacena el valor redondeado en la funcion de ecualizacion
-			funcionEcualizacion[i] = x0 + ((xl - x0) * (histogramaAcumulado[i] - (0.5 * funcionProbabilidad[i]))); // Freddy
+			funcionEcualizacion[i] = x0 + ((xl - x0) * (histogramaAcumulado[i] - (0.5 * funcionProbabilidad[i]))); // 
 			// funcionEcualizacion[i] = x0 + (xl - x0)*histogramaAcumulado[i]; // chinos
 			// tradicional
 

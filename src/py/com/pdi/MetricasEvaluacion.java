@@ -5,13 +5,13 @@ import ij.process.ImageProcessor;
 
 public class MetricasEvaluacion {
 
-	// PSNR
+	// Peak signal-to-noise ratio (PSNR)
 	public double psnr(ImagePlus imagenOriginal, ImagePlus imagenMejorada) {
 		double pSNR = 10 * Math.log10((Math.pow(255, 2)) / (MSE(imagenOriginal, imagenMejorada)));
 		return pSNR;
 	}
 
-	// MSE
+	// Mean Squared Error (MSE)
 	public double MSE(ImagePlus imagenOriginal, ImagePlus imagenMejorada) {
 		int M = imagenOriginal.getWidth();
 		int N = imagenOriginal.getHeight();
@@ -33,7 +33,7 @@ public class MetricasEvaluacion {
 		return mse;
 	}
 
-	// AMBE
+	// Absolute Mean Brightness Error (AMBE)
 	public double ambe(ImagePlus imagenOriginal, ImagePlus imagenMejorada) {
 		double aMBE = Math.abs(promedioImagen(imagenOriginal) - promedioImagen(imagenMejorada));
 		return aMBE;
