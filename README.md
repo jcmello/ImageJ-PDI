@@ -13,3 +13,5 @@
 [3] J. Mello Román, J. Vázquez Noguera, H. Legal-Ayala, D. Pinto-Roa, S. Gomez-Guerrero, and M. García Torres, *Entropy and Contrast Enhancement of Infrared Thermal Images Using the Multiscale Top-Hat Transform*, Entropy, vol. 21, no. 3, p. 244, Mar. 2019, doi: 10.3390/e21030244.
 
 [4] D. Legland, I. Arganda-Carreras, and P. Andrey, *MorphoLibJ: integrated library and plugins for mathematical morphology with ImageJ*, Bioinformatics, vol. 32, no. 22, pp. 3532–3534, Jul. 2016, doi: 10.1093/bioinformatics/btw413.
+
+[5] S. Mukhopadhyay and B. Chanda, *A multiscale morphological approach to local contrast enhancement*, Signal Processing, vol. 80, no. 4, pp. 685–696, Apr. 2000, doi: 10.1016/s0165-1684(99)00161-9.
