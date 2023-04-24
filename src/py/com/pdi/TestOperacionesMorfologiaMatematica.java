@@ -19,14 +19,22 @@ public class TestOperacionesMorfologiaMatematica {
 		ic.convertToGray8();
 		ImageProcessor ip = im2.getProcessor(); // Para procesar la imagen
 
-		//Erosion
 		int r = 1;
 		Strel B = DiskStrel.fromRadius(r);
+		
+		//Erosion
 		ImageProcessor eRosion = Morphology.erosion(ip, B);
-		ImagePlus newImage = new ImagePlus("Erosion", eRosion);
+		ImagePlus eroImage = new ImagePlus("Erosion", eRosion);
+		
+		//Dilatacion
+		ImageProcessor dIlatacion = Morphology.dilation(ip, B);
+		ImagePlus dilImage = new ImagePlus("DIlatacion", dIlatacion);
 		
 		
+		//Apertura
+		ImageProcessor aPertura = Morphology.opening(ip, B);
 		// Imagenes resultantes
-		newImage.show();
+		eroImage.show();
+		dilImage.show();
 	}
 }
