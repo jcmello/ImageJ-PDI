@@ -7,11 +7,12 @@ import ij.process.ImageProcessor;
 import inra.ijpb.morphology.Morphology;
 import inra.ijpb.morphology.Strel;
 import inra.ijpb.morphology.strel.DiskStrel;
+import inra.ijpb.morphology.strel.LinearDiagDownStrel;
 
 public class TestMejoraTopHat {
 
 	public static void main(String[] args) {
-		String ruta = "C:\\Proyectos_PDI\\ImageJ-PDI\\imagenes\\1.jpg";
+		String ruta = "C:\\Proyectos_PDI\\ImageJ-PDI\\imagenes\\157032.jpg";
 		ImagePlus im = IJ.openImage(ruta); // carga la imagen
 		im.show(); // Muestra la imagen original
 		ImagePlus im2 = im.duplicate(); // duplicar la imagen
@@ -20,7 +21,7 @@ public class TestMejoraTopHat {
 		ImageProcessor ip = im2.getProcessor(); // Para procesar la imagen
 
 		int r = 7;
-		Strel B = DiskStrel.fromRadius(r);
+		Strel B = LinearDiagDownStrel.fromDiameter(r);
 		// TH
 		ImageProcessor th = Morphology.whiteTopHat(ip, B);
 

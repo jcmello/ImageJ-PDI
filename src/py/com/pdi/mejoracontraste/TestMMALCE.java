@@ -37,12 +37,12 @@ public class TestMMALCE {
 		ImageProcessor ip = im2.getProcessor(); // Para procesar la imagen
 
 		int n = 7; // Numero de iteraciones
-		// Primer top-hat y botton hat
 		ImageProcessor th;
 		ImageProcessor bh;
 		ArrayList<ImageProcessor> matrizSW = new ArrayList<>();
 		ArrayList<ImageProcessor> matrizSB = new ArrayList<>();
-
+		
+		// Radio inicial igual a 1
 		for (int i = 1; i <= n; i++) {
 			int r = i;
 			Strel B = DiskStrel.fromRadius(r);
@@ -52,6 +52,7 @@ public class TestMMALCE {
 			matrizSB.add(bh);
 		}
 		
+		//Sumatorias de Top-Hat
 		ImageProcessor SW = matrizSW.get(0);
 		ImageProcessor SB = matrizSB.get(0);
 		for(int x = 1; x < n; x++) {
@@ -83,7 +84,7 @@ public class TestMMALCE {
 		return mmalce;
 	}
 
-	public static ImageProcessor sumaImagenes(ImageProcessor ip1, ImageProcessor ip2) {
+	private static ImageProcessor sumaImagenes(ImageProcessor ip1, ImageProcessor ip2) {
 		int M = ip1.getWidth();
 		int N = ip1.getHeight();
 
