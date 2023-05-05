@@ -15,3 +15,5 @@
 [4] D. Legland, I. Arganda-Carreras, and P. Andrey, *MorphoLibJ: integrated library and plugins for mathematical morphology with ImageJ*, Bioinformatics, vol. 32, no. 22, pp. 3532–3534, Jul. 2016, doi: 10.1093/bioinformatics/btw413.
 
 [5] S. Mukhopadhyay and B. Chanda, *A multiscale morphological approach to local contrast enhancement*, Signal Processing, vol. 80, no. 4, pp. 685–696, Apr. 2000, doi: 10.1016/s0165-1684(99)00161-9.
+
+[6] X. Bai, *Image enhancement through contrast enlargement using the image regions extracted by multiscale top-hat by reconstruction*, Optik, vol. 124, no. 20, pp. 4421–4424, Oct. 2013, doi: 10.1016/j.ijleo.2013.01.100.
