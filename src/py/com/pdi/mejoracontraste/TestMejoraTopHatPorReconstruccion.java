@@ -14,7 +14,7 @@ public class TestMejoraTopHatPorReconstruccion {
 	public static void main(String[] args) {
 		String ruta = "C:\\Proyectos_PDI\\ImageJ-PDI\\imagenes\\157032.jpg";
 		ImagePlus im = IJ.openImage(ruta); // carga la imagen
-		//im.show(); // Muestra la imagen original
+		// im.show(); // Muestra la imagen original
 		ImagePlus im2 = im.duplicate(); // duplicar la imagen
 		ImageConverter ic = new ImageConverter(im2);
 		ic.convertToGray8();
@@ -26,32 +26,32 @@ public class TestMejoraTopHatPorReconstruccion {
 		// Erosion
 		ImageProcessor eRosion = Morphology.erosion(ip, B);
 		ImagePlus eroImage = new ImagePlus("Erosion", eRosion);
-		//eroImage.show();
+		eroImage.show();
 
 		// Apertura por reconstrucción
 		ImageProcessor aReconst = Reconstruction.reconstructByDilation(eRosion, ip, 8);
 		ImagePlus rbdImage = new ImagePlus("Apertura por reconstrucción", aReconst);
-		//rbdImage.show();
+		rbdImage.show();
 
 		// Dilatacion
 		ImageProcessor dIlatacion = Morphology.dilation(ip, B);
 		ImagePlus dilImage = new ImagePlus("Dilatación", dIlatacion);
-		//dilImage.show();
+		dilImage.show();
 
 		// Cierre por reconstruccion
 		ImageProcessor cReconst = Reconstruction.reconstructByErosion(dIlatacion, ip, 8);
 		ImagePlus rbeImage = new ImagePlus("Cierre por reconstrucción", cReconst);
-		//rbeImage.show();
+		rbeImage.show();
 
 		// Transformada de Top-Hat por Reconstrucción
 		ImageProcessor RTH = restaImagenes(ip, aReconst);
 		ImagePlus rthImage = new ImagePlus("Top-Hat por apertura reconstructiva", RTH);
-		//rthImage.show();
+		rthImage.show();
 
 		// Transformada de Bottom-Hat por Reconstrucción
 		ImageProcessor RBH = restaImagenes(cReconst, ip);
 		ImagePlus rbhImage = new ImagePlus("Top-Hat por cierre reconstructivo", RBH);
-		//rbhImage.show();
+		rbhImage.show();
 
 		// Mejora de contraste (IE = I + th - bh)
 		ImageProcessor IE = imageEnhancement(ip, RTH, RBH);
